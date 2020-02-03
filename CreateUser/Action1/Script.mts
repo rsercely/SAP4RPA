@@ -1,11 +1,11 @@
 ﻿SAPGuiSession("Session").SAPGuiWindow("SAP Easy Access").SAPGuiOKCode("OKCode").Set "SU01"
 SAPGuiSession("Session").SAPGuiWindow("SAP Easy Access").SendKey ENTER
-SAPGuiSession("Session").SAPGuiWindow("User Maintenance: Initial").SAPGuiEdit("User").Set  DataTable("nwUser", dtGlobalSheet)
+SAPGuiSession("Session").SAPGuiWindow("User Maintenance: Initial").SAPGuiEdit("User").Set  "NEWUSER1"
 SAPGuiSession("Session").SAPGuiWindow("User Maintenance: Initial").SAPGuiButton("Create   (F8)").Click
-SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiEdit("Last name").Set DataTable("nwLName", dtGlobalSheet)
+SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiEdit("Last name").Set "BartSimpson"
 SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiTabStrip("TABSTRIP1").Select "Logon Data"
-SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiEdit("New Password").SetSecure DataTable("nwPW", dtGlobalSheet)
-SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiEdit("Repeat Password").SetSecure DataTable("nwPW", dtGlobalSheet)
+SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiEdit("New Password").SetSecure "*******"
+SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiEdit("Repeat Password").SetSecure "*******"
 SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SendKey ENTER
 SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiButton("Enter").Click
 SAPGuiSession("Session").SAPGuiWindow("Maintain Users").SAPGuiButton("Save   (Ctrl+S)").Click
